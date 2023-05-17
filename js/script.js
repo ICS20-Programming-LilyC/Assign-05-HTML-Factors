@@ -10,6 +10,7 @@ function factorsSent
   
    // initializing the numbers and message variable to an empty string
   let number = "";
+  let counter = "";
 
   // getting the user values for the minimum and maximum numbers
   let number = parseInt(document.getElementById("number").value);
