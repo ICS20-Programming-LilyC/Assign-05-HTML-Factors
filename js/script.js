@@ -6,38 +6,28 @@
 
 "use strict"
 
-function factorsSent
-  
-   // initializing the numbers and message variable to an empty string
-  let number = "";
-  let counter = "";
+function factorsSent() {
+  let counter = 1;
+  let numberString = "";
+  let message = "";
 
-  // getting the user values for the minimum and maximum numbers
-  let number = parseInt(document.getElementById("number").value);
+  let number = parseInt(document.getElementById("number").value);
 
-  // initializing the counter variable to the minNumber
-  let counter = number
+  if (isNaN(number)) {
+    message = "Please enter valid numbers.";
+  } 
 
-  if ((isNaN(number) {
-    message = "Please enter valid numbers.";
-  }
+  // Else...
+  else {
+    while (counter <= number) {
+      if (number % counter === 0) {
+        numberString += counter + "<br>";
+      }
+      counter++;
+    }
 
-  // else, complete while loop to create list of odd numbers between min and max
-  else {
-    
-    // while loop that specifies the range
-    while (counter <= number) {
+    message = "Here is a list of all the factors for the number you entered:<br><br>" + numberString;
+  }
 
-      // if statement checks for odd numbers, provided that the condition in the while statement is true. It uses the remainder operand.
-      if (number % counter == 0) {
-        number += counter + "<br>";
-      }
-      counter++;
-    }
-    message = "Here is a list of all the factors fro the number you entered:<br><br>" + number;
-  }
-
-  // displaying the results (the range of odd numbers) back to the user
-  document.getElementById("results").innerHTML = message;
+  document.getElementById("results").innerHTML = message;
 }
-
