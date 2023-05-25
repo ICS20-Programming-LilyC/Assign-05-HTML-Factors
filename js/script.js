@@ -33,7 +33,7 @@ function factorsSent() {
     }
 
     while (counter <= number) {
-      if (number % counter === 0) {
+      if (number % counter == 0) {
         numberString += counter + "<br>";
       }
       counter++;
