@@ -1,0 +1,29 @@
+/* Created by: Lily C
+* Created on: 05/25/2023
+* This CSS file defines the style for index.html
+* Assign-05-HTML-Factors
+*/
+
+body {
+  background-color: peru;
+  padding-left: 20px; padding-right: 20px;
+}
+
+h1 {
+  background-color: rgb(181 74 74);
+  color: hsl(88deg 38% 15%);
+  padding: 40px;
+  text-align: center;
+}
+
+p {
+  background-color: #8c9484;
+  color: #641e0c;
+}
+
+#results {
+  background-color: #853614;
+  color: #000;
+}
+
+
