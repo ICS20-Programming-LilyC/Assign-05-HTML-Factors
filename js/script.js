@@ -17,33 +17,39 @@ function factorsSent() {
 
   if (isNaN(number)) {
     message = "Please enter a valid number.";
-  } else if {
-    (radio.checked) {
-      counter = number;
-    } else {
-      counter = 1;
-    }
+  } 
+    
+  else if (radio.checked) {
+    counter = number;
+  } 
+    
+  else {
+    counter = 1;
+  }
 
-    if (number < 0) {
+  if (number < 0) {
       counter = -1;
       number = Math.abs(number);
-      message = "Here is a list of all the factors for the negative number you entered:<br><br>";
-    } else {
-      message = "Here is a list of all the factors for the number you entered:<br><br>";
-    }
+    } 
+    
+  else {
+    message = "Here is a list of all the factors for your integer:<br><br>";
+  }
 
-    while (counter <= number) {
-      if (number % counter == 0) {
+  while (counter <= number) {
+    if (number % counter == 0) {
         numberString += counter + "<br>";
       }
       counter++;
     }
 
-    if (number % 2 === 0) {
-      message += "The number you entered is even.<br>";
-    } else {
-      message += "The number you entered is odd.<br>";
-    }
+  if (number % 2 == 0) {
+    message += "The integer you entered is even.<br>";
+  } 
+    
+  else {
+    message += "The integer you entered is odd.<br>";
+  }
 
     message += numberString;
   }
