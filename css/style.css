@@ -5,20 +5,28 @@
 */
 
 body {
-  background-color: peru;
+  background-color: lightgray;
   padding-left: 20px; padding-right: 20px;
 }
 
 h1 {
-  background-color: rgb(181 74 74);
-  color: hsl(88deg 38% 15%);
+  background-color: rgb(171, 171, 171);
+  color: hsl(232deg 17% 35%);
   padding: 40px;
   text-align: center;
 }
 
 p {
-  background-color: #8c9484;
-  color: #641e0c;
+  background-color: #4a4e69;
+  color: #bababa;
+}
+
+h3 {
+  color: #4a4e69;
+}
+
+h5 {
+  color: #5f4c67;
 }
 
 #results {
