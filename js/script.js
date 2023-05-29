@@ -6,54 +6,38 @@
 
 "use strict";
 
+// Setting varibales.
 function factorsSent() {
   let counter = 1;
   let numberString = "";
   let message = "";
-
-  const REVERSE_YES = document.getElementById("reverse-yes");
+  
+// Initalizing varibles.
   let number = parseInt(document.getElementById("number").value);
   let absNumber = Math.abs(number);
 
+  // If the user doesn't input anything, dislpay "Please enter a valid number."
   if (isNaN(number)) {
     message = "Please enter a valid number.";
   } 
-  
+
+    // Otherwise, if number is equal to 0, display "Zero has no factors."
   else if (number == 0) {
     message = "Zero has no factors.";
-  } 
-    
-  else if (REVERSE_YES.checked == true) {
-    counter = -number;
-    message = "Here is a list of all the factors for your number:<br><br>";
-
-    for (counter = -absNumber; counter <= absNumber; counter++) {
-      if (absNumber % counter == 0) {
-        numberString += counter + "<br>";
-      }
-    }
-
-    if (number % 2 == 0) {
-      message += "The number you entered is even.<br>";
-    } 
-    
-    else {
-      message += "The number you entered is odd.<br>";
-    }
-
-    message += numberString;
   }
-  
+
+    // Else 
   else {
     counter = -number;
     message = "Here is a list of all the factors for your number:<br><br>";
-
      for (counter = -absNumber; counter <= absNumber; counter++) {
       if (number % counter == 0) {
         numberString += counter + "<br>";
       }
     }
-
+    
+    // Add the factor list to the message.
+     message += numberString;
 
     if (number % 2 == 0) {
       message += "The number you entered is even.<br>";
@@ -62,8 +46,6 @@ function factorsSent() {
     else {
       message += "The number you entered is odd.<br>";
     }
-
-    message += numberString;
   }
 
   document.getElementById("results").innerHTML = message;
