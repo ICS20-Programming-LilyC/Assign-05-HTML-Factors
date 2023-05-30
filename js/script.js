@@ -16,17 +16,12 @@ function factorsSent() {
   let number = parseInt(document.getElementById("number").value);
   let absNumber = Math.abs(number);
 
-  // If the user doesn't input anything, dislpay "Please enter a valid number."
-  if (isNaN(number)) {
-    message = "Please enter a valid number.";
+  // If the user didn't provide any input or their input is equal to 0, display "Please enter a valid number (Zero NOT included)."
+  if (isNaN(number) || (number == 0)) {
+    message = "Please enter a valid number (Zero NOT included).";
   } 
 
-    // Otherwise, if number is equal to 0, display "Zero has no factors."
-  else if (number == 0) {
-    message = "Zero has no factors.";
-  }
-
-    // Else 
+    // Else, the user provided a valid number.
   else {
     counter = -number;
     message = "Here is a list of all the factors for your number:<br><br>";
